@@ -24,7 +24,7 @@ provider "pathly" {}
 
 variable "site_url" {
   type        = string
-  description = "URL probed by Pathly (https://pathlyhq.com/en/developers)."
+  description = "URL probed by Pathly — see https://pathlyhq.com/en/developers"
   default     = "https://shop.example.com"
 }
 
