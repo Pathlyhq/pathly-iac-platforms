@@ -57,7 +57,7 @@ resource "pathly_sla_target" "home" {
 }
 
 resource "pathly_maintenance_window" "weekly_backup" {
-  weekday      = 0
+  weekday      = 7
   start_minute = 180
   duration_min = 120
   reason       = "Weekly backup (Spacelift + Pathly)"
@@ -65,7 +65,7 @@ resource "pathly_maintenance_window" "weekly_backup" {
 
 resource "pathly_webhook" "alerts" {
   url    = var.webhook_url
-  events = ["run.failed", "run.recovered", "incident.opened"]
+  events = ["run.failed", "run.recovered"]
 }
 
 output "scenario_id" {
