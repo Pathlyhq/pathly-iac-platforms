@@ -81,7 +81,7 @@ Create an API token in the [Pathly console](https://pathlyhq.com) and store it a
 
 | Package | Role |
 |---|---|
-| [pathly-terraform-provider](https://github.com/pathlyhq/pathly-terraform-provider) | Terraform / OpenTofu |
+| [terraform-provider-pathly](https://github.com/Pathlyhq/terraform-provider-pathly) | Terraform / OpenTofu |
 | [pathly-pulumi](https://github.com/pathlyhq/pathly-pulumi) | Pulumi |
 | [pathly-cdktf](https://github.com/pathlyhq/pathly-cdktf) | CDK for Terraform |
 | [pathly-crossplane](https://github.com/pathlyhq/pathly-crossplane) | Crossplane |
