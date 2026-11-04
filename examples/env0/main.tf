@@ -42,7 +42,7 @@ resource "pathly_scenario" "service" {
   url             = var.site_url
   interval_sec    = 300
   expected_status = 200
-  severity        = "high"
+  severity        = "major"
   tags            = ["env0", var.environment_name, "pathly"]
   folder          = "env0"
   runbook         = "https://pathlyhq.com/en/developers"
@@ -66,7 +66,7 @@ resource "pathly_maintenance_window" "deploy_window" {
 
 resource "pathly_webhook" "alerts" {
   url    = var.webhook_url
-  events = ["run.failed", "incident.opened"]
+  events = ["run.failed", "run.recovered"]
 }
 
 output "scenario_id" {

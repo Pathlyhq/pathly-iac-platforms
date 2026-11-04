@@ -55,7 +55,7 @@ resource "pathly_sla_target" "api_slo" {
 }
 
 resource "pathly_maintenance_window" "weekly" {
-  weekday      = 0
+  weekday      = 7
   start_minute = 60
   duration_min = 90
   reason       = "Scalr + Pathly weekly window"
@@ -63,7 +63,7 @@ resource "pathly_maintenance_window" "weekly" {
 
 resource "pathly_webhook" "ops" {
   url    = var.webhook_url
-  events = ["run.failed", "run.recovered", "incident.opened"]
+  events = ["run.failed", "run.recovered"]
 }
 
 output "scenario_id" {
